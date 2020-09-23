@@ -1,7 +1,9 @@
 ---
 date: 2020-09-22T10:30
 title: Superpowered keyword args in Haskell
-tags: [Haskell]
+tags:
+  - Haskell
+  - Essays
 ---
 
 ## Overview

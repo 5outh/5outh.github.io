@@ -4,4 +4,4 @@ tags: [home]
 
 # Writings by Ben Kovach
 
-- [[99c052ab]]
+[[z:zettels?tag=Essays&timeline]]
