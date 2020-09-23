@@ -72,7 +72,6 @@ One way to improve this situation is to make extensive use of `newtype`
 wrappers and avoid [[Boolean Blindness]] by utilizing more specific [[Sum Type]]s. This
 is a pretty common idiom, and it helps a bit:
 
-
 ```haskell
 data VisibilityFilter = PublicOnly | PublicOrPrivate
 newtype AuthorId = AuthorId UserId -- and a bunch more, you get the picture
@@ -175,7 +174,6 @@ argument names as before, so the function body would not need to change.
 suppose we now want to not only filter by a single user, but we also want to
 search for posts that contain certain tags. We could modify `FetchPostsArgs` to
 support this case:
-
 
 ```haskell
 data FetchPostsArgs =
@@ -283,9 +281,10 @@ main = do
   -- ... do something with posts
 ```
 
-Using [[Boolean Blindness]]s gives us better composition of common operations in many
+Using [[Monoid]]s gives us better composition of common operations in many
 cases. Here, I might argue that taking this step is unnecessary, but it is at
 least helpful for illustrative purposes.
+
 ### A small note
 
 Suppose we were writing a function `fetchPostsForUser` instead, which always
@@ -298,7 +297,7 @@ fetchPostsForUser :: MonadFetch m => UserId -> FetchPostsArgs -> m [Post]
 ```
 
 The conceptual reason for this is that `fetchPostsForUser` has no default
-behavior without a `UserId`, and we need default behavior for the `Monoid` to
+behavior without a `UserId`, and we need default behavior for the [[Monoid]] to
 remain sensible.
 
 ## In Short
