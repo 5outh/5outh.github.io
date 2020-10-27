@@ -11,7 +11,7 @@ tags:
 As programs get larger and more complex, the components therein also grow. This
 happens on several levels; we often have to deal with growing applications,
 packages, modules, and test suites. This blog post is about how to deal with the
-humble function.
+growth of the humble function.
 
 If you've ever worked on a production codebase, you know that _one_ function
 that lives in a module that several others depend on. It sits at the very core
@@ -124,7 +124,7 @@ reduces specifying "I don't care" for very general function call. The trick, if
 you can call it that, is to stuff all of those parameters into a data type, then
 make that data type defaultable and allow overriding its fields to deal with
 special cases like filters and sorting. It reminds me of [[Keyword Args]] in
-languages like Python, so I'm loosely naming it the _Keyword Args Pattern_
+languages like Python, so I'll refer to this as the _Keyword Args Pattern_.
 
 ```haskell
 data FetchPostsArgs =
@@ -202,13 +202,12 @@ defaultFetchPostsArgs = FetchPostsArgs
 
 and update the body of `fetchPosts` as needed.
 
-## Utilizing [[Boolean Blindness]]s and [[Smart Constructor]]s
+## Utilizing Booleans and [[Smart Constructor]]s
 
 `fetchPostArgs` looks a lot like a [[Boolean Blindness]], and we can certainly frame it
 that way, with a little bit of finagling:
 
 ```haskell
-
 data Visibility = Public | Private | Protected
 
 data FetchPostsArgs =
@@ -234,8 +233,10 @@ defaultFetchPostsArgs = FetchPostsArgs
   , tags = []
   }
 
-instance Semigroup FetchPostsArgs where -- ... pairwise <>
-instance Semigroup FetchPostsArgs where -- ... every field is `mempty`
+instance Semigroup FetchPostsArgs where
+  (<>) = -- ... pairwise <>
+instance Monoid FetchPostsArgs where
+  mempty = -- ... every field is `mempty`
 ```
 
 with this formulation, we can build up [[Smart Constructor]]s and compose them to
@@ -282,8 +283,9 @@ main = do
 ```
 
 Using [[Monoid]]s gives us better composition of common operations in many
-cases. Here, I might argue that taking this step is unnecessary, but it is at
-least helpful for illustrative purposes.
+cases. I might argue that taking this step is unnecessary for this particular
+example, but it is at least helpful for illustrative purposes and might come in
+handy depending on your use case.
 
 ### A small note
 
@@ -309,4 +311,4 @@ If you are dealing with functions that:
 - Have a well-behaved "default" operation, where the arguments simply specify
   refinemesnts on that default operation
 
-you might want to consider trying out this pattern.
+then the [[Keyword Args]] pattern might work for you.
