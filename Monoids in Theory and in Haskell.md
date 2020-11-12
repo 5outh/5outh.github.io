@@ -108,8 +108,10 @@ that we saw before*:
 
 <img src="https://ben-kovach-blog-assets.s3.amazonaws.com/images/monoid.png" style="width:350px" class="center-block">
 
+```{=html}
 <small>* The image gets a little messy with the negatives, but those are valid
 arrows as well.</small>
+```
 
 Morphisms in our category are elements of $\mathbb{Z}$. This can be confusing if we
 have some expectation about the way arrows should look. But, recall that to
@@ -200,9 +202,11 @@ SumC 8
 SumC 107
 ```
 
+```{=html}
 <small>
 * s/id/mempty, s/./+, s/SumC/Sum and you've got the original form.
 </small>
+```
 
 Just like with a `Category`, this isn't the only `Monoid` you can encode -- you
 should be able to use this type of construction for any haskell `Monoid`.

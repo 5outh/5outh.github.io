@@ -50,9 +50,11 @@ _on top of_ sets in order to find more interesting insights.
 A category* is one of these objects. Intuitively, a category is a
 structure containing a bunch of "things" along with a way to move between those things.
 
+```{=html}
 <small>
 \* Technically, _small_ category.
 </small>
+```
 
 ## The category (in theory)
 
@@ -84,10 +86,12 @@ is static across all categories. Hence we cannot say exactly what $id$ or
 $\circ$ _does_; we can only say how they should behave when they appear
 in a mathematical expression using a certain category.
 
+```{=html}
 <small>
 \* Slightly handwavy, but formal enough to get the point across for our purposes!
   For two _full_ definitions, see [nlab's page on categories](https://ncatlab.org/nlab/show/category#definitions).
 </small>
+```
 
 Here's an example:
 
@@ -105,10 +109,12 @@ Some other examples of categories are:
   next. 
 - **Grp**, the category with groups as objects and group homomorphisms as arrows.*
 
+```{=html}
 <small>
 * It's hard to find examples that aren't deeply entrenched in mathematics;
   sorry!
 </small>
+```
 
 ## Hask
 

@@ -5,17 +5,20 @@ author: Ben Kovach
 tags:
   - Haskell
   - Generative
+  - Essays
 ---
 
 In this post, I will describe and implement a small interface for modeling Markov chains and simulating their evolution in Haskell.
 
 ### What is a Markov Chain?
 
+```{=html}
 <p>
 <small width="200px" style="float:right; text-align:center"><a href="http://commons.wikimedia.org/wiki/File:Markovkate_01.svg#mediaviewer/File:Markovkate_01.svg"><img width="260px" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Markovkate_01.svg/1200px-Markovkate_01.svg.png" alt="Markovkate 01.svg"></a><br>A simple two-state Markov chain.<br>image by <a href="//commons.wikimedia.org/wiki/User:Joxemai4" title="User:Joxemai4">Joxemai4</a>.</small>
 
 A [discrete-time Markov chain (DTMC)](http://en.wikipedia.org/wiki/Markov_chain) is a mathematical system that probabalistically transitions between states using only its current state. A Markov chain can be thought of as a directed graph with probabilities for edges and states for vertices. The Markov chain on the right has two states, `E` and `A`. The diagram states that a Markov chain in state `E` will transition back to state `E` with probability `0.3`, and to state `A` with probability `0.7`, and similarly for `A`'s transitions. They can be used for a wide variety of applications in statistical modeling. 
 </p>
+```
 
 They can also be used to generate sentences similar to arbitrary blocks of text. We will explore this application towards the end of the post.
 
@@ -184,7 +187,9 @@ insertSentence :: MarkovI T.Text -> T.Text -> MarkovI T.Text
 insertSentence mkv = insertMkvPairsInto mkv . wordPairs
 ```
 
+```{=html}
 <small>wordPairs could be written more simply in a pointful style, but I think the point{free, less} version is cool. :)</small>
+```
 
 Now, to build a Markov chain from a bunch of sentences (be it a paragraph, a book), we can just fold into an empty `MarkovI` and convert it from the intermediate representation:
 

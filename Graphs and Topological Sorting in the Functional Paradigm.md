@@ -32,7 +32,9 @@ this blog post. I am going to discuss one way to represent a graph in
 the Haskell programming language, and how to functionally solve a common
 problem using graphs. Graphs are often represented visually like this:
 
+```{=html}
 <center><img src="http://2.bp.blogspot.com/-WS-YS-sS1Yw/UL_BNs1BumI/AAAAAAAAAEY/ZwGmaHAtcBI/s400/ABCDEF.png"><p class="small"><em>Graph representing abstract data</em></p></img></center>
+```
 
 This graph links the first six letters of the alphabet in an arbitrary
 way. This data doesn't really mean anything, but it will serve as a
@@ -116,7 +118,9 @@ vertex, with outgoing edges representing connections to the people they
 beat.
 
 
+```{=html}
 <center><img src="http://4.bp.blogspot.com/-coJ1uHjEo94/UMC_E4j2EPI/AAAAAAAAAE0/fMKyRGqMfqU/s400/PandR.png"><p class="small"><em>A graph of dance competition results</em></p></center>
+```
 
 It would be nice to be able to be able to read scenarios like this from
 a text file containing the important data and parse it into a graph.
