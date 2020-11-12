@@ -10,13 +10,14 @@ tags:
 
 ### Introduction
 
-At time of writing, "Blotch" is my most recent piece of generative artwork. It
+At time of writing, "Blotch" is my most recent piece of [[Generative]] artwork. It
 looks nothing like I had originally envisioned, and the iteration of the project
 was interesting in its own right. Getting this piece to a place that I actually liked
 was a long, fun, and somewhat arduous process punctuated with tons of intermediate
 results that look absolutely nothing like the final piece. This isn't uncommon,
 and I want to talk about it. Feel free to scroll down to the bottom of this post
-or check out my  [art page](/art.html) to see the final result.
+or check out my [portfolio](https://benkovach.art/portfolio) to see the final
+result.
 
 ## 1
 <img style="margin-left:auto; margin-right:auto; display:block;" width="70%" src="https://ben-kovach-blog-assets.s3.amazonaws.com/images/blotch/001.png"></img>

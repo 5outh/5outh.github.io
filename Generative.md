@@ -2,8 +2,6 @@
 title: Generative
 ---
 
-# Generative
-
 "Generative" is a broad term for processes that utilize computer simulations,
 often involving randomness, to produce a work of some kind.
 

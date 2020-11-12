@@ -1,8 +1,7 @@
 ---
 tags: [home]
+title: Ben Kovach
 ---
-
-# Ben Kovach
 
 Hi, I'm Ben, a Software Engineer, [[Haskell]] developer and [[Generative]] Artist.
 

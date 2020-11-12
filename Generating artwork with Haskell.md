@@ -10,11 +10,11 @@ tags:
 
 ### Introduction
 
-I've been creating [generative art](https://en.wikipedia.org/wiki/Generative_art) consistently for about six months now. People are starting to ask what my stack looks like, and until now I haven't had anything to point at; I'd like to change that today! I'm going to lay out my approach in this blog post, and we'll put together something simple using the stack I've been using to generate art.
+I've been creating [[Generative]] art consistently for about six months now. People are starting to ask what my stack looks like, and until now I haven't had anything to point at; I'd like to change that today! I'm going to lay out my approach in this blog post, and we'll put together something simple using the stack I've been using to generate art.
 
 The long and short of it:
 
-- I use Haskell
+- I use [[Haskell]]
 - I use Cairo
 - It rocks!
 
@@ -22,11 +22,11 @@ Here's what we'll be making:
 
 <img src="https://ben-kovach-blog-assets.s3.amazonaws.com/images/final_colored_grid.png" width="100%" style="display:block;margin:auto"></img>
 
-I'm assuming some familiarity with Haskell in this post. I'm happy to help others learn, but won't cover some of the minutiae here - my contact information is totally open if you'd like to reach out!
+I'm assuming some familiarity with [[Haskell]] in this post. I'm happy to help others learn, but won't cover some of the minutiae here - my contact information is totally open if you'd like to reach out!
 
 ### Getting set up
 
-You'll need the following Haskell packages to run this script, if you want to follow along:
+You'll need the following [[Haskell]] packages to run this script, if you want to follow along:
 
 - cairo
 - colour
@@ -53,14 +53,14 @@ we use on the `surface`. In our case, this will only ever be a flat color. It ca
 
 #### Haskell
 
-First off, I've been writing Haskell code for a long time. I'm very familiar with it, so it was very natural for me to try out this workflow. My choice to go in this direction is largely rooted in familiarity. I followed [Tyler Hobbs](http://www.tylerlhobbs.com/)'s lead for a little while, writing Processing code through [Quil in Clojure](http://www.tylerlhobbs.com/writings/using-quil-for-artwork). It worked really well for a while, and I learned a lot of fundamentals regarding generative art (and Lisp!) this way. However, there were some things I just never got *quite* working, and I didn't feel like I was as productive as I could be. So, I gave this new stack a shot.
+First off, I've been writing [[Haskell]] code for a long time. I'm very familiar with it, so it was very natural for me to try out this workflow. My choice to go in this direction is largely rooted in familiarity. I followed [Tyler Hobbs](http://www.tylerlhobbs.com/)'s lead for a little while, writing Processing code through [Quil in Clojure](http://www.tylerlhobbs.com/writings/using-quil-for-artwork). It worked really well for a while, and I learned a lot of fundamentals regarding generative art (and Lisp!) this way. However, there were some things I just never got *quite* working, and I didn't feel like I was as productive as I could be. So, I gave this new stack a shot.
 
 Pretty immediately, I saw some improvements:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I switched my genart stack to haskell/cairo a few days ago. Here&#39;s what changed:<br><br>- Deterministic random generation (seeding works across many libs)<br>- Image generation is super fast<br>- Image scaling is much easier<br>- Moving stuff around is slower, but usually correct</p>&mdash; Benjamin Kovach (@BendotK) <a href="https://twitter.com/BendotK/status/964186342564524032?ref_src=twsrc%5Etfw">February 15, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-For context, I never got seeding working in my old stack. In Haskell, pretty much every library involving randomness works with `StdGen` (which is part of the standard library, and has a nice API). Scaling images is just a matter of applying a scaling matrix to the whole image (we'll see this later); it was a pretty manual process before. Changing code around is a bazillion times easier because I don't really have to worry about messing my data types up - typically the compiler will yell until it becomes satisfied, at which point running the code does what I'd expect\*.
+For context, I never got seeding working in my old stack. In [[Haskell]], pretty much every library involving randomness works with `StdGen` (which is part of the standard library, and has a nice API). Scaling images is just a matter of applying a scaling matrix to the whole image (we'll see this later); it was a pretty manual process before. Changing code around is a bazillion times easier because I don't really have to worry about messing my data types up - typically the compiler will yell until it becomes satisfied, at which point running the code does what I'd expect\*.
 
 \* Not always, of course. But the adage of "if it compiles it works" does have some merit, especially in the world of generative art, where happy accidents are totally welcome.
 
