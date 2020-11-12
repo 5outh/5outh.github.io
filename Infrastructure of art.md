@@ -234,7 +234,7 @@ I have a utility function called `renderProgress` that renders a single png with
 the surface that is currently being drawn. I can litter my program with
 calls to `renderProgress` - often in loops - to render a given frame with the
 appropriate index. This stores images in the folder
-`./images/<name>/progress/<seed>/<index>.png`, where `<index>` is a frame index,
+`.https://ben-kovach-blog-assets.s3.amazonaws.com/images/<name>/progress/<seed>/<index>.png`, where `<index>` is a frame index,
 padded with 0s to 8 digits. For example:
 
 ```
@@ -271,7 +271,7 @@ In order to turn these frames into a video, I use a little wrapper around
 # $3: desired frame rate
 
 # Location of the eventual video file
-VIDEO_FILE="./images/$1/progress/$2/progress.mp4"
+VIDEO_FILE=".https://ben-kovach-blog-assets.s3.amazonaws.com/images/$1/progress/$2/progress.mp4"
 
 # Use ffmpeg to create a video from the images in "images/$1/progress/$2/"
 # in sequential order
@@ -280,7 +280,7 @@ ffmpeg -y -r $3 -f image2 -s 640x640 \
   -vcodec libx264 -crf 25 -pix_fmt yuv420p $VIDEO_FILE
 
 # Remove intermediate frames after video has been rendered
-rm ./images/$1/progress/$2/*.png
+rm .https://ben-kovach-blog-assets.s3.amazonaws.com/images/$1/progress/$2/*.png
 
 # Open the video file after it has completed rendering.
 xdg-open $VIDEO_FILE

@@ -6,7 +6,7 @@ tags:
   - Essays
 ---
 
-In a daze, I typed `abcdefghijklmnopqrstuvwxyz` into `vim` to see what would
+In a daze, I typed `abcdefghijklmnopqrstuvwxyz` into [[Vim]] to see what would
 happen, and got `bcdefghijklmnopqrstuvwxyz`. Well, that was boring. Anyway,
 it gave me the idea to write this short guide for what every letter of the
 alphabet represents/does in vim, along with a few of the commands I use on a
