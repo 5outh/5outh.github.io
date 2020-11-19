@@ -309,6 +309,6 @@ If you are dealing with functions that:
 - Have many positional arguments
 - Are called in a variety of ways to accomplish specific goals
 - Have a well-behaved "default" operation, where the arguments simply specify
-  refinemesnts on that default operation
+  refinements on that default operation
 
 then the [[Keyword Args]] pattern might work for you.
