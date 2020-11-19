@@ -204,7 +204,7 @@ and update the body of `fetchPosts` as needed.
 
 ## Utilizing Booleans and [[Smart Constructor]]s
 
-`fetchPostArgs` looks a lot like a [[Boolean Blindness]], and we can certainly frame it
+`fetchPostArgs` looks a lot like a [[Monoid]], and we can certainly frame it
 that way, with a little bit of finagling:
 
 ```haskell
