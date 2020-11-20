@@ -46,6 +46,8 @@ Once this setup is done, I will begin to receive backlinks to the dated sections
 
 That's pretty much it for the process. Spend some time setting up a new page at the beginning of the sprint, make sure I check my notes every day (which I do as a habit), and try to tick all the boxes. It works pretty well.
 
+One last thing: The iteration template is a living document. I can add and remove reminders and notes as needed, which means it is always up-to-date with the most recent version of the process. This is essential, since processes rarely stay the same, and what I really need remember and do changes from time to time as well.
+
 ## The nitty-gritty
 
 Apart from the in-app process, the actual iteration template itself deserves some attention. Here's the doc for my current iteration with sections expanded:
@@ -68,7 +70,7 @@ Roam Research is a great tool, but:
 - there have been some historical issues with large-scale data loss
 - there have been reports of inappropriate behavior within the company (which I can only hope is being shaken out)
 
-You may find that it is not the tool for you. Luckily, there are other tools out there that do similar things and are adaptable this to type of workflow. [This blog post by Anne-Laure Le Cunff presents some alternatives](https://nesslabs.com/roam-research-alternatives). I have personally tried a few of these tools (Obsidian is the most promising replacement, in my opinion), but none of them quite have the ease-of-use and clean interface that keeps me on Roam. Regardless, the approach can be adapted.
+You may find that it is not the tool for you. Luckily, there are other tools out there that do similar things and are adaptable this to type of workflow. [This blog post by Anne-Laure Le Cunff presents some alternatives](https://nesslabs.com/roam-research-alternatives). I have personally tried a few of these tools (Obsidian is the most promising replacement, in my opinion), but none of them quite have the ease-of-use and clean interface that keeps me on Roam. Regardless, the approach can be adapted to your tool of choice.
 
 ## Wrapping up
 
