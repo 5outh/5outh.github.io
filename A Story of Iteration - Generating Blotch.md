@@ -335,8 +335,8 @@ images shown here are only a small subset of the images generated along the way,
 but they serve as a good representation of the path the piece took from start to
 finish.
 
-For more artwork like this, see [my art page](/art.html) and follow me on
-[twitter](twitter.com/bendotk) and [instagram](instagram.com/bendotk). "Blotch"
+For more artwork like this, see [my portfolio](https://benkovach.art) and follow me on
+[twitter](https://twitter.com/bendotk) and [instagram](https://instagram.com/bendotk). "Blotch"
 is available as a one-of-a-kind print on [my shop](https://bendotk.bigcartel.com).
 
 Finally, if you want to be alerted of new art for sale, feel free to sign up for
